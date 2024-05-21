@@ -7,8 +7,5 @@
     { "src": "/api/(.*)", "dest": "/server.js" },
     { "src": "/uploads/(.*)", "dest": "/uploads/$1" },
     { "src": "/(.*)", "dest": "/server.js" }
-  ],
-  "dependencies": {
-    "pg": "^8.7.1"
-  }
+  ]
 }
