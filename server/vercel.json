@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "./sync.js",
+      "src": "./server.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "/sync.js"
+      "src": "/(.*)",
+      "dest": "/api"
     },
     {
       "src": "/uploads/(.*)",
