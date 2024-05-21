@@ -15,8 +15,12 @@ app.use("/api/properties", propertyRoutes);
 app.use("/api/user", userRoutes);
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
-// Protected route example
+// Route for root path ("/")
+app.get("/", (req, res) => {
+  res.send("Server is running."); // Response message indicating server is running
+});
 
+// Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
